@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from perfil.models import Categoria
+from perfil.models import Categoria, Conta
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -21,3 +21,4 @@ def update_valor_categoria(request, id):
 def ver_planejamento(request):
     categorias = Categoria.objects.all()
     return render(request, 'ver_planejamento.html', {'categorias': categorias})
+
