@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from perfil.models import Categoria, Conta
-from django.http import HttpResponse, JsonResponse
+from perfil.models import Categoria
+from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
 

@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     #My-apps
     'perfil',
     'extrato',
-    'planejamento'
+    'planejamento',
+    'contas'
+
 ]
 
 MIDDLEWARE = [

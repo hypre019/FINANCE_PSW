@@ -55,13 +55,10 @@ def view_extrato(request):
     contas = Conta.objects.all()
     categorias = Categoria.objects.all()
     
-    
     conta_get = request.GET.get('conta')
     categoria_get = request.GET.get('categoria')
-
     
     valores = Valores.objects.filter(data__month=datetime.now().month)
-    
     
     if conta_get:
         valores = valores.filter(conta__id=conta_get)
@@ -84,6 +81,7 @@ def exportar_pdf(request):
     template_render = render_to_string(path_template, {'valores': valores, 'contas': contas, 'categorias': categorias})
     HTML(string=template_render).write_pdf(path_output)
 
+    #voltando o ponteiro para o início do arquivo
     path_output.seek(0)
     
 

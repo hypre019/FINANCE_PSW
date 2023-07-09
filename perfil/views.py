@@ -60,7 +60,7 @@ def cadastrar_categoria(request):
     nome = request.POST.get('categoria')
     essencial = bool(request.POST.get('essencial'))
     
-# isinstance
+
     categoria = Categoria(
         categoria=nome,
         essencial=essencial
